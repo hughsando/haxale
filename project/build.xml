@@ -1,0 +1,232 @@
+<xml>
+
+  <include name="${HXCPP}/build-tool/BuildCommon.xml"/>
+
+   <files id="ale" dir="../xitari" tags="" >
+    <compilerflag value="-I." />
+    <compilerflag value="-I../xitari" />
+    <compilerflag value="-DBSPF_WIN32" if="windows" />
+    <compilerflag value="-DWIN32" if="windows" />
+
+    <file name="common/SoundNull.cxx" />
+    <file name="common/SoundSDL.cxx" />
+    <file name="emucore/AtariVox.cxx" />
+    <file name="emucore/Booster.cxx" />
+    <file name="emucore/Cart.cxx" />
+    <file name="emucore/Cart0840.cxx" />
+    <file name="emucore/Cart2K.cxx" />
+    <file name="emucore/Cart3E.cxx" />
+    <file name="emucore/Cart3F.cxx" />
+    <file name="emucore/Cart4A50.cxx" />
+    <file name="emucore/Cart4K.cxx" />
+    <file name="emucore/CartAR.cxx" />
+    <file name="emucore/CartCV.cxx" />
+    <file name="emucore/CartDPC.cxx" />
+    <file name="emucore/CartE0.cxx" />
+    <file name="emucore/CartE7.cxx" />
+    <file name="emucore/CartF4.cxx" />
+    <file name="emucore/CartF4SC.cxx" />
+    <file name="emucore/CartF6.cxx" />
+    <file name="emucore/CartF6SC.cxx" />
+    <file name="emucore/CartF8.cxx" />
+    <file name="emucore/CartF8SC.cxx" />
+    <file name="emucore/CartFASC.cxx" />
+    <file name="emucore/CartFE.cxx" />
+    <file name="emucore/CartMB.cxx" />
+    <file name="emucore/CartMC.cxx" />
+    <file name="emucore/CartUA.cxx" />
+    <file name="emucore/Console.cxx" />
+    <file name="emucore/Control.cxx" />
+    <file name="emucore/Deserializer.cxx" />
+    <file name="emucore/Driving.cxx" />
+    <file name="emucore/Event.cxx" />
+    <file name="emucore/FSNode.cxx" />
+    <file name="emucore/Joystick.cxx" />
+    <file name="emucore/Keyboard.cxx" />
+    <file name="emucore/m6502/src/Device.cxx" />
+    <file name="emucore/m6502/src/M6502.cxx" />
+    <file name="emucore/m6502/src/M6502Hi.cxx" />
+    <file name="emucore/m6502/src/M6502Low.cxx" />
+    <file name="emucore/m6502/src/NullDev.cxx" />
+    <file name="emucore/m6502/src/System.cxx" />
+    <file name="emucore/M6532.cxx" />
+    <file name="emucore/MD5.cxx" />
+    <file name="emucore/MediaSrc.cxx" />
+    <file name="emucore/OSystem.cxx" />
+    <file name="emucore/Paddles.cxx" />
+    <file name="emucore/Props.cxx" />
+    <file name="emucore/PropsSet.cxx" />
+    <file name="emucore/Random.cxx" />
+    <file name="emucore/Serializer.cxx" />
+    <file name="emucore/Settings.cxx" />
+    <file name="emucore/SpeakJet.cxx" />
+    <file name="emucore/Switches.cxx" />
+    <file name="emucore/TIA.cxx" />
+    <file name="emucore/TIASnd.cxx" />
+    <section if="windows" >
+       <file name="os_dependent/FSNodeWin32.cxx" />
+       <file name="os_dependent/OSystemWin32.cxx" />
+       <file name="os_dependent/SettingsWin32.cxx" />
+    </section>
+    <section unless="windows" >
+       <file name="os_dependent/FSNodePOSIX.cxx" />
+       <file name="os_dependent/OSystemUNIX.cxx" />
+       <file name="os_dependent/SettingsUNIX.cxx" />
+    </section>
+
+    <file name="common/export_screen.cpp" />
+    <file name="common/ale_interface.cpp" />
+    <file name="common/display_screen.cpp" />
+    <file name="common/Defaults.cpp" />
+    <file name="common/Constants.cpp" />
+
+
+    <file name="agents/PlayerAgent.cpp" />
+    <file name="agents/RandomAgent.cpp" />
+    <file name="agents/SDLKeyboardAgent.cpp" />
+    <file name="agents/SingleActionAgent.cpp" />
+    <file name="controllers/ale_controller.cpp" />
+    <file name="controllers/fifo_controller.cpp" />
+    <file name="controllers/internal_controller.cpp" />
+    <file name="controllers/rlglue_controller.cpp" />
+    <file name="environment/ale_state.cpp" />
+    <file name="environment/archive_binary_in.cpp" />
+    <file name="environment/archive_binary_out.cpp" />
+    <file name="environment/phosphor_blend.cpp" />
+    <file name="environment/stella_environment.cpp" />
+    <file name="games/Roms.cpp" />
+    <file name="games/RomSettings.cpp" />
+    <file name="games/RomUtils.cpp" />
+    <file name="games/supported/AirRaid.cpp" />
+    <file name="games/supported/Alien.cpp" />
+    <file name="games/supported/Amidar.cpp" />
+    <file name="games/supported/Assault.cpp" />
+    <file name="games/supported/Asterix.cpp" />
+    <file name="games/supported/Asteroids.cpp" />
+    <file name="games/supported/Atlantis.cpp" />
+    <file name="games/supported/BankHeist.cpp" />
+    <file name="games/supported/BattleZone.cpp" />
+    <file name="games/supported/BeamRider.cpp" />
+    <file name="games/supported/Berzerk.cpp" />
+    <file name="games/supported/Bowling.cpp" />
+    <file name="games/supported/Boxing.cpp" />
+    <file name="games/supported/Breakout.cpp" />
+    <file name="games/supported/Carnival.cpp" />
+    <file name="games/supported/Centipede.cpp" />
+    <file name="games/supported/ChopperCommand.cpp" />
+    <file name="games/supported/CrazyClimber.cpp" />
+    <file name="games/supported/Defender.cpp" />
+    <file name="games/supported/DemonAttack.cpp" />
+    <file name="games/supported/DoubleDunk.cpp" />
+    <file name="games/supported/ElevatorAction.cpp" />
+    <file name="games/supported/Enduro.cpp" />
+    <file name="games/supported/FishingDerby.cpp" />
+    <file name="games/supported/Freeway.cpp" />
+    <file name="games/supported/Frostbite.cpp" />
+    <file name="games/supported/Gopher.cpp" />
+    <file name="games/supported/Gravitar.cpp" />
+    <file name="games/supported/Hero.cpp" />
+    <file name="games/supported/IceHockey.cpp" />
+    <file name="games/supported/JamesBond.cpp" />
+    <file name="games/supported/JourneyEscape.cpp" />
+    <file name="games/supported/Kangaroo.cpp" />
+    <file name="games/supported/Krull.cpp" />
+    <file name="games/supported/KungFuMaster.cpp" />
+    <file name="games/supported/MontezumaRevenge.cpp" />
+    <file name="games/supported/MsPacman.cpp" />
+    <file name="games/supported/NameThisGame.cpp" />
+    <file name="games/supported/Pacman.cpp" />
+    <file name="games/supported/Phoenix.cpp" />
+    <file name="games/supported/Pitfall.cpp" />
+    <file name="games/supported/Pong.cpp" />
+    <file name="games/supported/Pooyan.cpp" />
+    <file name="games/supported/PrivateEye.cpp" />
+    <file name="games/supported/QBert.cpp" />
+    <file name="games/supported/RiverRaid.cpp" />
+    <file name="games/supported/RoadRunner.cpp" />
+    <file name="games/supported/RoboTank.cpp" />
+    <file name="games/supported/Seaquest.cpp" />
+    <file name="games/supported/Skiing.cpp" />
+    <file name="games/supported/Solaris.cpp" />
+    <file name="games/supported/SpaceInvaders.cpp" />
+    <file name="games/supported/StarGunner.cpp" />
+    <file name="games/supported/Surround.cpp" />
+    <file name="games/supported/Tennis.cpp" />
+    <file name="games/supported/TimePilot.cpp" />
+    <file name="games/supported/Tutankham.cpp" />
+    <file name="games/supported/UpNDown.cpp" />
+    <file name="games/supported/Venture.cpp" />
+    <file name="games/supported/VideoChess.cpp" />
+    <file name="games/supported/VideoPinball.cpp" />
+    <file name="games/supported/WizardOfWor.cpp" />
+    <file name="games/supported/YarsRevenge.cpp" />
+    <file name="games/supported/Zaxxon.cpp" />
+  </files>
+
+
+
+
+ <set name="ZLIB" value="../xitari/zlib" />
+
+ 	<files id="zlib" tags="" >
+
+		<cache value="1" />
+		<tag value="${NATIVE_TOOLKIT_OPTIM_TAG}" if="NATIVE_TOOLKIT_OPTIM_TAG" />
+
+		<depend name="${ZLIB}/zutil.h"/>
+		<depend name="${ZLIB}/zconf.h"/>
+		<depend name="${ZLIB}/trees.h"/>
+		<depend name="${ZLIB}/inflate.h"/>
+		<depend name="${ZLIB}/inftrees.h"/>
+		<depend name="${ZLIB}/inffast.h"/>
+		<depend name="${ZLIB}/inffixed.h"/>
+		<depend name="${ZLIB}/gzguts.h"/>
+		<depend name="${ZLIB}/crc32.h"/>
+		<depend name="${ZLIB}/deflate.h"/>
+
+		<compilerflag value="-I${ZLIB}/" />
+		
+		<file name="${ZLIB}/adler32.c" />
+		<file name="${ZLIB}/crc32.c" />
+		<file name="${ZLIB}/infback.c" />
+		<file name="${ZLIB}/inflate.c" />
+		<file name="${ZLIB}/uncompr.c"/>
+		<file name="${ZLIB}/compress.c" />
+		<file name="${ZLIB}/deflate.c" />
+		<file name="${ZLIB}/gzread.c" />
+		<file name="${ZLIB}/gzwrite.c" />
+		<file name="${ZLIB}/gzclose.c" />
+		<file name="${ZLIB}/gzlib.c" />
+		<file name="${ZLIB}/inffast.c" />
+		<file name="${ZLIB}/inftrees.c" />
+		<file name="${ZLIB}/trees.c" />
+      <file name="${ZLIB}/zutil.c" />
+
+      <file name="${ZLIB}/contrib/minizip/unzip.c" />
+      <file name="${ZLIB}/contrib/minizip/ioapi.c" />
+		
+	</files>
+
+
+ <files id="cffi" >
+    <file name="ExternalInterface.cpp" />
+ </files>
+
+
+ <files id="main" >
+    <compilerflag value="-DBSPF_WIN32" if="windows" />
+    <compilerflag value="-DWIN32" if="windows" />
+    <file name="main.cpp" />
+ </files>
+
+
+ <target id="default" tool="linker" toolid="dll" output="ale" >
+    <outdir name="../ndll/${BINDIR}" />
+    <ext value=".ndll" />
+    <files id="ale" />
+    <files id="zlib" />
+    <!-- <files id="main" if="false" /> -->
+    <files id="cffi" unless="false" />
+  </target>
+
+ </xml>

@@ -1,0 +1,6 @@
+[submodule "xitari"]
+	path = xitari
+	url = https://github.com/deepmind/xitari
+[submodule "atari_roms"]
+	path = atari_roms
+	url = https://github.com/openai/atari-py

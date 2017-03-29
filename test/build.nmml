@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  
+  <meta
+     title="Haxe / Atari Learning Environment"
+     package="org.haxe.nme.ale"
+     version="1.0.0"
+     company="haxale" 
+  />
+  
+  <app
+     file="Haxale" 
+     main="Haxale"
+  />
+  
+  <window
+     width="640" 
+     height="480" 
+     orientation="landscape" 
+     fps="60"
+     background="0xeeeeee"
+     require_shaders="true"
+     resizable="true"
+     hardware="true"
+  />
+
+  <assets from="../atari_roms/atari_py/atari_roms" include="*.bin" />
+
+  <haxelib name="nme" />
+  <haxelib name="haxale" />
+  
+</project>
