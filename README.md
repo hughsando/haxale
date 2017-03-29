@@ -1,6 +1,11 @@
 # haxale
 Haxe build for tool for xitari/A.L.E.
 
+setup
+-----
+Make sure you get the submodules when you clone the repo, eg ``git clone --recursive ...``.
+
+Set haxelib to point this directory, eg ``haxelib dev haxale .``
 
 build
 -----
